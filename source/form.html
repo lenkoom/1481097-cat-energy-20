@@ -30,63 +30,66 @@
          <p class="programms__descr">Заполните анкету, и мы подберем программу питания для вашего кота</p>
          <!--ФОРМА-->       
          <form class="programms__form" action="https://echo.htmlacademy.ru" method="post">
-            <label for="user-name" class="programms__form--user-name">Имя(*):</label>
-            <input class="programms__form--input-name" type="text" name="user-name" id="user-name" placeholder="Барсик">
-            <label for="user-weight" class="programms__form--user-weight">Вес(*):</label>
-            <input class="programms__form--input-weight" type="text" name="user-weight" id="user-weight" placeholder="7">
-            <label for="user-age" class="programms__form--user-age">Возраст(лет):</label>
-            <input class="programms__form--input-name" type="text" name="user-age" id="user-age" placeholder="7">
+            <fieldset class="programms__user">
+               <legend class="programms__user-main visually-hidden">Основная информация</legend>
+               <label for="user-name" class="programms__form programms__form--user-name">Имя(*):</label>
+               <input class="programms__form programms__form--input-name" type="text" name="user-name" id="user-name" placeholder="Барсик">
+               <label for="user-weight" class="programms__form programms__form--user-weight">Вес(*):</label>
+               <input class="programms__form programms__form--input-weight" type="text" name="user-weight" id="user-weight" placeholder="7">
+               <label for="user-age" class="programms__form programms__form--user-age">Возраст(лет):</label>
+               <input class="programms__form programms__form--input-name" type="text" name="user-age" id="user-age" placeholder="7">
+            </fieldset>
             <fieldset class="programms__check">
                <legend class="programms__options visually-hidden">Программы</legend>
                <ul class="programms__list">
                   <li class="programms__item">
-                     <input type="radio" name="programms-direction" value="fit" id="programms__check-fit" class="programms__check--direction" checked>
+                     <input type="radio" name="programms-direction" value="fit" id="programms__check-fit" class="programms__check-direction" checked>
                      <label for="programms__check-fit">Похудение</label>
                   </li>
                   <li class="programms__item">
-                     <input type="radio" name="programms-direction" value="fat" id="programms__check-fat" class="programms__check--direction">
+                     <input type="radio" name="programms-direction" value="fat" id="programms__check-fat" class="programms__check-direction">
                      <label for="programms__check-fat">Набор массы</label>
                   </li>
                   <li class="programms__item">
-                     <input type="radio" name="programms-direction" value="help" id="programms__check-help" class="programms__check--direction">
+                     <input type="radio" name="programms-direction" value="help" id="programms__check-help" class="programms__check-direction">
                      <label for="programms__check-help">Не знаю (нужен ваш совет)</label>
                   </li>
                </ul>
             </fieldset>
             <fieldset>
-               <legend class="programms__contacts contact">Контактные данные (владельца кота)</legend>
-               <label for="user-email" class="contact__email">e-mail:*</label>
+               <legend class="programms__contacts">Контактные данные (владельца кота)</legend>
+               <label for="user-email" class="programms__contacts-email">e-mail:*</label>
                <input class="contact__input-radio" type="email" name="contact__email" id="user-email" placeholder="kuklachev@gmail.com">
-               <label for="user-tel" class="contact__tel">Телефон:*</label>
+               <label for="user-tel" class="programms__contacts-tel">Телефон:*</label>
                <input class="contact__input-radio" type="tel" name="contact__tel" id="user-tel" placeholder="8 (960) 900-60-90">
-               <label class="contact__input-text">Текст письма:
+               <label class="programms__contacts-letter">Текст письма:
                <textarea placeholder="Расскажите обо всех повадках кота" class="contact__input-text"></textarea>
                </label>
             </fieldset>
-            <fieldset class="programms__add add">
-               <legend class="add__optionally">Дополнительно</legend>
-               <ul class="add__list">
-                  <li class="add__item">
-                     <input class="add__input-checkbox" type="checkbox" name="sugar" id="add__sugar-check" checked>
-                     <label for="add__sugar-check">Сахарозаменитель</label>
+            <fieldset class="programms__add">
+               <legend class="programms__add-optionally">Дополнительно</legend>
+               <ul class="programms__add-list">
+                  <li class="programms__add-item">
+                     <input class="programms__add-checkbox" type="checkbox" name="sugar" id="programms__add-sugar" checked>
+                     <label for="programms__add-sugar">Сахарозаменитель</label>
                   </li>
-                  <li class="filter-option">
-                     <input class="add__input-checkbox" type="checkbox" name="water" id="add__water-check">
-                     <label for="add__water-check">Питьевая вода</label>
+                  <li class="programms__add-item">
+                     <input class="programms__add-checkbox" type="checkbox" name="water" id="programms__add-water">
+                     <label for="programms__add-water">Питьевая вода</label>
                   </li>
-                  <li class="filter-option">
-                     <input class="add__input-checkbox" type="checkbox" name="milk" id="add__milk-check" checked>
-                     <label for="add__milk-check">Молоко</label>
+                  <li class="programms__add-item">
+                     <input class="programms__add-checkbox" type="checkbox" name="milk" id="programms__add-milk" checked>
+                     <label for="programms__add-milk">Молоко</label>
                   </li>
-                  <li class="filter-option">
-                     <input class="add__input-checkbox" type="checkbox" name="vitamins" id="add__vitamins-check">
-                     <label for="add__vitamins-check">Витамины</label>
+                  <li class="programms__add-item">
+                     <input class="aprogramms__add-checkbox" type="checkbox" name="vitamins" id="programms__add-vitamins">
+                     <label for="programms__add-vitamins">Витамины</label>
                   </li>
                </ul>
             </fieldset>
-            <button type="submit" class="contact__btn" value="Отправить">Отправить заявку</button>
+            <button type="submit" class="programms__btn" value="Отправить">Отправить заявку</button>
          </form>
-         <p class="add__glose">* — Обязательные поля</p>
+         <p class="programms__glose">* — Обязательные поля</p>
       </main>
       <footer class="footer">
          <div class="footer__contact">
