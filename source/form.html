@@ -11,10 +11,10 @@
          <!--НАВИГАЦИЯ-->
          <div class="header">
             <a class="header__logo-img">
-              <img src="img/logo.svg" width="37" height="33" alt="Логотип интернет-магазина Cat Energy">
+            <img src="img/logo.svg" width="37" height="33" alt="Логотип интернет-магазина Cat Energy">
             </a>
             <a class="header__logo">
-              <img src="img/logo-ce.svg" width="128" height="24" alt="Cat Energy">
+            <img src="img/logo-ce.svg" width="128" height="24" alt="Cat Energy">
             </a>
             <nav class="header__navigation navigation">
                <ul class="navigation__menu">
@@ -25,8 +25,68 @@
             </nav>
          </div>
       </header>
-      <main class="main">
-         <h1 class="visually-hidden">Интернет магазин функционального питания для котов «Cat Energy»</h1>
+      <main class="programms">
+         <h1 class="programms__item">Подбор программы</h1>
+         <p class="programms__descr">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+         <!--ФОРМА-->       
+         <form class="programms__form" action="https://echo.htmlacademy.ru" method="post">
+            <label for="user-name" class="programms__form--user-name">Имя(*):</label>
+            <input class="programms__form--input-name" type="text" name="user-name" id="user-name" placeholder="Барсик">
+            <label for="user-weight" class="programms__form--user-weight">Вес(*):</label>
+            <input class="programms__form--input-weight" type="text" name="user-weight" id="user-weight" placeholder="7">
+            <label for="user-age" class="programms__form--user-age">Возраст(лет):</label>
+            <input class="programms__form--input-name" type="text" name="user-age" id="user-age" placeholder="7">
+            <fieldset class="programms__check">
+               <legend class="programms__options visually-hidden">Программы</legend>
+               <ul class="programms__list">
+                  <li class="programms__item">
+                     <input type="radio" name="programms-direction" value="fit" id="programms__check-fit" class="programms__check--direction" checked>
+                     <label for="programms__check-fit">Похудение</label>
+                  </li>
+                  <li class="programms__item">
+                     <input type="radio" name="programms-direction" value="fat" id="programms__check-fat" class="programms__check--direction">
+                     <label for="programms__check-fat">Набор массы</label>
+                  </li>
+                  <li class="programms__item">
+                     <input type="radio" name="programms-direction" value="help" id="programms__check-help" class="programms__check--direction">
+                     <label for="programms__check-help">Не знаю (нужен ваш совет)</label>
+                  </li>
+               </ul>
+            </fieldset>
+            <fieldset>
+               <legend class="programms__contacts contact">Контактные данные (владельца кота)</legend>
+               <label for="user-email" class="contact__email">e-mail:*</label>
+               <input class="contact__input-radio" type="email" name="contact__email" id="user-email" placeholder="kuklachev@gmail.com">
+               <label for="user-tel" class="contact__tel">Телефон:*</label>
+               <input class="contact__input-radio" type="tel" name="contact__tel" id="user-tel" placeholder="8 (960) 900-60-90">
+               <label class="contact__input-text">Текст письма:
+               <textarea placeholder="Расскажите обо всех повадках кота" class="contact__input-text"></textarea>
+               </label>
+            </fieldset>
+            <fieldset class="programms__add add">
+               <legend class="add__optionally">Дополнительно</legend>
+               <ul class="add__list">
+                  <li class="add__item">
+                     <input class="add__input-checkbox" type="checkbox" name="sugar" id="add__sugar-check" checked>
+                     <label for="add__sugar-check">Сахарозаменитель</label>
+                  </li>
+                  <li class="filter-option">
+                     <input class="add__input-checkbox" type="checkbox" name="water" id="add__water-check">
+                     <label for="add__water-check">Питьевая вода</label>
+                  </li>
+                  <li class="filter-option">
+                     <input class="add__input-checkbox" type="checkbox" name="milk" id="add__milk-check" checked>
+                     <label for="add__milk-check">Молоко</label>
+                  </li>
+                  <li class="filter-option">
+                     <input class="add__input-checkbox" type="checkbox" name="vitamins" id="add__vitamins-check">
+                     <label for="add__vitamins-check">Витамины</label>
+                  </li>
+               </ul>
+            </fieldset>
+            <button type="submit" class="contact__btn" value="Отправить">Отправить заявку</button>
+         </form>
+         <p class="add__glose">* — Обязательные поля</p>
       </main>
       <footer class="footer">
          <div class="footer__contact">
@@ -46,7 +106,7 @@
          <!--В СОЦИАЛЬНЫХ СЕТЯХ-->
          <div class="footer__bottom">
             <a class="footer__logo">
-              <img src="img/logo-ce.svg" width="128" height="24" alt="Cat Energy">
+            <img src="img/logo-ce.svg" width="128" height="24" alt="Cat Energy">
             </a>
             <div class="social social--footer">
                <ul class="social__list">
@@ -69,10 +129,10 @@
             </div>
             <!--АКАДЕМИЯ-->
             <div class="footer__copyright">
-              <p class="footer__copyright-text">HTML Academy</p>
-              <p class="footer__copyright-img">
-                <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy">
-              </p>
+               <p class="footer__copyright-text">HTML Academy</p>
+               <p class="footer__copyright-img">
+                  <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy">
+               </p>
             </div>
          </div>
       </footer>
